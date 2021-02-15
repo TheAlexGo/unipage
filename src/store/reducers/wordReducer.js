@@ -25,18 +25,18 @@ export default function wordReducer(state = defaultState, action) {
     case KEY_CORRECT:
       return {
         ...state,
-        str: action.payload,
+        str: action.payload.str,
         indexSymb: state.indexSymb+1,
         current: state.current+1,
-        all_symbols: state.all_symbols+1,
+        all_symbols: action.payload.all_symbols,
         timerActive: true
       }
     case KEY_ERROR:
       return {
         ...state,
-        str: action.payload,
+        str: action.payload.str,
         error: state.error+1,
-        all_symbols: state.all_symbols+1,
+        all_symbols: action.payload.all_symbols,
         timerActive: true
       }
     case SET_DATA_TIMER:
@@ -65,3 +65,5 @@ export default function wordReducer(state = defaultState, action) {
       return state;
   }
 }
+
+

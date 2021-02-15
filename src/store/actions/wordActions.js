@@ -15,7 +15,7 @@ export const getTextAction = () => {
       ({data: ['Жили у бабуси два весёлых гуся: один серый, другой белый, два весёлых гуся!']})
     ))
 
-    let responseText = ""
+    let responseText
     if(0) {
       responseText = response.data[0]
     } else {
@@ -28,11 +28,11 @@ export const getTextAction = () => {
   }
 }
 
-export const keyCorrect = (str) =>
-  ({type: KEY_CORRECT, payload: str});
+export const keyCorrect = (str, all_symbols) =>
+  ({type: KEY_CORRECT, payload: {str: str, all_symbols: all_symbols}});
 
-export const keyError = (str) =>
-  ({type: KEY_ERROR, payload: str});
+export const keyError = (str, all_symbols) =>
+  ({type: KEY_ERROR, payload: {str: str, all_symbols: all_symbols}});
 
 export const setText = (str) =>
   ({type: SET_TEXT, payload: {str: str, haveText: true}});

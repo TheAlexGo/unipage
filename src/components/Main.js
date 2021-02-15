@@ -1,14 +1,16 @@
-import '../Main.css'
-import React, {useCallback, useEffect} from "react";
-import {Words} from "./Words";
+import React, {useEffect, useCallback} from "react";
 import {useDispatch, useSelector} from "react-redux";
+import {Words} from "./Words";
 import {store} from "../store/store";
+// import {calcAccuracy} from "./Timer";
 import {keyCorrect, keyError} from "../store/actions/wordActions";
+
 
 function Main() {
   const dispatch = useDispatch();
   const text = useSelector(state => state.words.str);
   const indexSymb = useSelector(state => state.words.indexSymb);
+  const all_symbols = useSelector(state => state.words.all_symbols);
 
   const onKeyPressed = useCallback((e) => {
       const currentObj = text[indexSymb];
@@ -20,18 +22,18 @@ function Main() {
         text[indexSymb] = {...currentObj, class: 'passed-b'};
         if (text[indexSymb + 1])
           text[indexSymb + 1] = {...nextObj, class: 'active-b'};
-
-        dispatch(keyCorrect(text));
+        dispatch(keyCorrect(text, all_symbols+1))
       } else {
         if(currentObj.class === 'active-b')
         {
           text[indexSymb] = {...currentObj, class: 'error-b'};
-          dispatch(keyError(text))
+          dispatch(keyError(text, all_symbols+1))
         }
       }
 
-    }, [dispatch, indexSymb, text]
-  );
+      // calcAccuracy(dispatch)
+    }, [all_symbols, dispatch, indexSymb, text]
+  )
 
   useEffect(() => {
     document.addEventListener("keydown", onKeyPressed);
@@ -42,9 +44,9 @@ function Main() {
       console.log(`Верно: ${current}\nНеверно: ${error}`);
     }
     return () => {
-      document.removeEventListener("keydown", onKeyPressed);
+      document.removeEventListener("keydown", onKeyPressed)
     }
-  }, [indexSymb, onKeyPressed, text]);
+  }, [indexSymb, onKeyPressed, text])
 
   return (
     <div className='text-block'

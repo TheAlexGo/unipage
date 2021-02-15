@@ -1,3 +1,4 @@
+import './Main.css';
 import Main from "./components/Main";
 import {GetTextButton} from "./components/GetTextButton";
 import {getTextAction} from "./store/actions/wordActions";
