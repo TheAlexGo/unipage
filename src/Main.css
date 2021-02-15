@@ -1,0 +1,25 @@
+.text-block {
+    font-size: 30px;
+}
+
+.active-b {
+    color: white;
+    background-color: #57c257;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.normal-b {
+    color: black;
+}
+
+.passed-b {
+    color: green;
+}
+
+.error-b {
+    color: white;
+    background-color: #f34747;
+    border-radius: 5px;
+    padding: 2px;
+}

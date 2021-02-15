@@ -1,3 +1,4 @@
+import '../Main.css'
 import React, {useCallback, useEffect} from "react";
 import {Words} from "./Words";
 import {useDispatch, useSelector} from "react-redux";
