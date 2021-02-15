@@ -1,7 +1,6 @@
-import React from "react";
+import React, {useCallback, useEffect} from "react";
 import {Words} from "./Words";
 import {useDispatch, useSelector} from "react-redux";
-import {useCallback, useEffect} from "react/cjs/react.production.min";
 import {store} from "../store/store";
 import {keyCorrect, keyError} from "../store/actions/wordActions";
 
