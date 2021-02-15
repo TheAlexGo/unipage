@@ -1,5 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
 import React, {useEffect} from "react";
+import {startTimer} from "./Timer";
 
 export const Results = ({ accuracy, spm }) => {
   const dispatch = useDispatch();
@@ -8,7 +9,7 @@ export const Results = ({ accuracy, spm }) => {
 
   useEffect(() => {
     if(timerActive) {
-
+      startTimer(dispatch)
     }
   }, [dispatch, timerActive])
 

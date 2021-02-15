@@ -2,8 +2,8 @@ import React, {useEffect, useCallback} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {Words} from "./Words";
 import {store} from "../store/store";
-// import {calcAccuracy} from "./Timer";
 import {keyCorrect, keyError} from "../store/actions/wordActions";
+import {calcAccuracy} from "./Timer";
 
 
 function Main() {
@@ -30,8 +30,7 @@ function Main() {
           dispatch(keyError(text, all_symbols+1))
         }
       }
-
-      // calcAccuracy(dispatch)
+      calcAccuracy(dispatch)
     }, [all_symbols, dispatch, indexSymb, text]
   )
 
