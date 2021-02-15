@@ -1,3 +1,4 @@
+import Main from "./components/Main";
 
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
 
       </header>
       <section>
-
+        <Main />
       </section>
       <footer>
 
