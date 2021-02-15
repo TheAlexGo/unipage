@@ -1,5 +1,5 @@
-import {KEY_CORRECT, KEY_ERROR, SET_ACCURACY, SET_DATA_TIMER, SET_SPM, SET_TEXT, SET_TIMER_ID} from "../constActions";
 import axios from "axios";
+import {KEY_CORRECT, KEY_ERROR, SET_ACCURACY, SET_DATA_TIMER, SET_SPM, SET_TEXT, SET_TIMER_ID} from "../constActions";
 
 
 export const getTextAction = () => {
@@ -15,7 +15,7 @@ export const getTextAction = () => {
       ({data: ['Жили у бабуси два весёлых гуся: один серый, другой белый, два весёлых гуся!']})
     ))
 
-    let responseText
+    let responseText = ""
     if(0) {
       responseText = response.data[0]
     } else {
@@ -48,4 +48,3 @@ export const setAccuracy = (value) =>
 
 export const setSPM = (value) =>
   ({type: SET_SPM, payload: value})
-
