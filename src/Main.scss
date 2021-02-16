@@ -1,0 +1,84 @@
+.text-block {
+    font-size: 21px;
+}
+
+.active-b {
+    color: white;
+    background-color: #57c257;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.passed-b {
+    color: green;
+}
+
+.error-b {
+    color: white;
+    background-color: #f34747;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.light {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f5f5f5;
+    transition: .3s;
+
+    h1 {
+        color: #000000;
+    }
+
+    .text-block {
+        padding: 25px;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+
+    .normal-b {
+        color: black;
+    }
+}
+
+.dark {
+    width: 100vw;
+    height: 100vh;
+    background-color: #292e3c;
+    transition: .3s;
+    color: #ffebeb;
+
+    h1 {
+        color: #ffebeb;
+    }
+
+    .text-block {
+        padding: 25px;
+        background-color: #46485a;
+        border-radius: 10px;
+    }
+
+    .theme-switcher {
+        color: #ffebeb;
+    }
+
+    .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show>.nav-link {
+        color: #ffebeb;
+    }
+
+    .navbar-dark .navbar-brand:focus, .navbar-dark .navbar-brand:hover {
+        color: #ffebeb;
+    }
+
+    .navbar-dark .navbar-brand {
+        color: #ffebeb;
+    }
+
+    .btn-secondary {
+        color: #ffebeb;
+    }
+
+    .passed-b {
+        color: #87ff87;
+    }
+}

@@ -11,6 +11,7 @@ function Main() {
   const text = useSelector(state => state.words.str);
   const indexSymb = useSelector(state => state.words.indexSymb);
   const all_symbols = useSelector(state => state.words.all_symbols);
+  const haveText = useSelector(state => state.words.haveText);
 
   const onKeyPressed = useCallback((e) => {
       const currentObj = text[indexSymb];
@@ -47,8 +48,15 @@ function Main() {
     }
   }, [indexSymb, onKeyPressed, text])
 
+  let classBlock = 'text-block ';
+  if(haveText) {
+    classBlock += 'd-block';
+  } else {
+    classBlock += 'd-none';
+  }
+
   return (
-    <div className='text-block'
+    <div className={classBlock}
          onKeyDown={onKeyPressed}>
       <Words words={ text }/>
     </div>

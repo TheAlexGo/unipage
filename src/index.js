@@ -1,5 +1,5 @@
 import React from 'react';
-import './Main.css';
+import './Main.scss';
 import App from './App';
 import { render } from 'react-dom';
 import reportWebVitals from "./reportWebVitals";

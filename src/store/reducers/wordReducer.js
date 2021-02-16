@@ -1,4 +1,13 @@
-import {KEY_CORRECT, KEY_ERROR, SET_TEXT, SET_TIMER_ID, SET_DATA_TIMER, SET_ACCURACY, SET_SPM} from "../constActions";
+import {
+  KEY_CORRECT,
+  KEY_ERROR,
+  SET_TEXT,
+  SET_TIMER_ID,
+  SET_DATA_TIMER,
+  SET_ACCURACY,
+  SET_SPM,
+  SWITCH_THEME
+} from "../constActions";
 
 const defaultState = {
   str: "",
@@ -12,6 +21,7 @@ const defaultState = {
   timer_id: 0,
   timerActive: false,
   haveText: false,
+  theme: 'light'
 }
 
 export default function wordReducer(state = defaultState, action) {
@@ -60,6 +70,11 @@ export default function wordReducer(state = defaultState, action) {
       return {
         ...state,
         spm: action.payload
+      }
+    case SWITCH_THEME:
+      return {
+        ...state,
+        theme: action.payload
       }
     default:
       return state;

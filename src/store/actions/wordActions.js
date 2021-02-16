@@ -1,5 +1,14 @@
 import axios from "axios";
-import {KEY_CORRECT, KEY_ERROR, SET_ACCURACY, SET_DATA_TIMER, SET_SPM, SET_TEXT, SET_TIMER_ID} from "../constActions";
+import {
+  KEY_CORRECT,
+  KEY_ERROR,
+  SET_ACCURACY,
+  SET_DATA_TIMER,
+  SET_SPM,
+  SET_TEXT,
+  SET_TIMER_ID,
+  SWITCH_THEME
+} from "../constActions";
 
 
 export const getTextAction = () => {
@@ -48,3 +57,6 @@ export const setAccuracy = (value) =>
 
 export const setSPM = (value) =>
   ({type: SET_SPM, payload: value})
+
+export const switchTheme = (value) =>
+  ({type: SWITCH_THEME, payload: value})

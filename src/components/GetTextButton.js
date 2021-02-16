@@ -2,10 +2,11 @@ import {useSelector} from "react-redux";
 
 export const GetTextButton = ({getText}) => {
   const haveText = useSelector(state => state.words.haveText)
-  if(haveText) return (
-    <h1>Let's start!</h1>
-  ) ;
+  if(haveText) return null;
   return (
-    <button onClick={getText} >Загрузить текст</button>
+    <div className="d-flex flex-column align-items-center">
+      <h1>Давайте проверим вашу скорость?</h1>
+      <button className="btn btn-secondary" onClick={getText} >Загрузить текст</button>
+    </div>
   )
 }

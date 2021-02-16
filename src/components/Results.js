@@ -16,9 +16,15 @@ export const Results = ({ accuracy, spm }) => {
   if(!haveText) return null;
 
   return (
-    <div>
-      <div>Точность: {accuracy}%</div>
-      <div>Скорость печати: {spm} зн/мин.</div>
+    <div className="d-flex justify-content-between">
+      <div>
+        <span>Точность: </span>
+        <span>{accuracy}%</span>
+      </div>
+      <div>
+        <span>Скорость: </span>
+        <span>{spm} зн/мин.</span>
+      </div>
     </div>
   )
 }
