@@ -3,6 +3,8 @@ import Main from "./components/Main";
 import {useSelector} from "react-redux";
 import Header from "./components/Header";
 import React from "react";
+import Footer from "./components/Footer";
+import Modal from "./components/Modal";
 
 
 function App() {
@@ -10,9 +12,7 @@ function App() {
 
   return (
     <div className={theme}>
-      <header>
-        <Header />
-      </header>
+      <Header />
       <section className="mt-5">
         <div className="container">
           <div className="row">
@@ -22,9 +22,8 @@ function App() {
           </div>
         </div>
       </section>
-      <footer>
-
-      </footer>
+      <Footer />
+      <Modal />
     </div>
   )
 }

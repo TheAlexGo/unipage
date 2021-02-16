@@ -47,7 +47,11 @@ function Main() {
     if(indexSymb === text.length && text.length) {
       const error = store.getState().words.error;
       const current = store.getState().words.current;
-
+      // eslint-disable-next-line no-undef
+      const myModal = new bootstrap.Modal(document.getElementById('saveResultModal'), {
+        keyboard: false
+      })
+      myModal.show()
       console.log(`Верно: ${current}\nНеверно: ${error}`);
     }
     return () => {

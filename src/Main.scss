@@ -43,6 +43,10 @@
     .normal-b {
         color: black;
     }
+
+    footer {
+        background-color: #f8f9fa;
+    }
 }
 
 .dark {
@@ -50,37 +54,66 @@
     min-height: 100vh;
     background-color: #292e3c;
     transition: .3s;
-    color: #ffebeb;
+    color: #f4f7ff;
 
-    h1 {
-        color: #ffebeb;
-    }
 
     .text-block {
         background-color: #46485a;
     }
 
     .theme-switcher {
-        color: #ffebeb;
+        color: #f4f7ff;
     }
 
     .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show>.nav-link {
-        color: #ffebeb;
+        color: #f4f7ff;
     }
 
     .navbar-dark .navbar-brand:focus, .navbar-dark .navbar-brand:hover {
-        color: #ffebeb;
+        color: #f4f7ff;
     }
 
     .navbar-dark .navbar-brand {
-        color: #ffebeb;
+        color: #f4f7ff;
     }
 
     .btn-secondary {
-        color: #ffebeb;
+        color: #f4f7ff;
     }
 
     .passed-b {
         color: #87ff87;
+    }
+
+    //Modal
+    .modal-header {
+        background-color: #46485a;
+    }
+    .modal-body {
+        background-color: #292e3c;
+    }
+    .modal-footer {
+        background-color: #46485a;
+    }
+
+    input, select {
+        background-color: #5e6283;
+        color: #f4f7ff;
+    }
+    .form-select {
+        color: #f4f7ff;
+    }
+
+    input:disabled {
+        background-color: #636575;
+    }
+
+    footer {
+        background-color: #212529;
+    }
+
+    .btn-primary {
+        background-color: #89a3cb;
+        border-color: #94aacd;
     }
 }

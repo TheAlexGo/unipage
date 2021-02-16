@@ -6,7 +6,7 @@ import {
   SET_DATA_TIMER,
   SET_ACCURACY,
   SET_SPM,
-  SWITCH_THEME, SET_LANG, SET_COUNT
+  SWITCH_THEME, SET_LANG, SET_COUNT, SAVE_RESULT
 } from "../constActions";
 import {DEFAULT, ENG, RUS} from "../../constants";
 
@@ -42,7 +42,10 @@ const defaultState = {
     type: 'sentence',
     number: '',
     format: 'json'
-  }
+  },
+  results: [
+
+  ]
 }
 
 export default function wordReducer(state = defaultState, action) {
@@ -106,6 +109,11 @@ export default function wordReducer(state = defaultState, action) {
       return {
         ...state,
         settings: {...state.settings, number: action.payload}
+      }
+    case SAVE_RESULT:
+      return {
+        ...state,
+        results: [...state.results, {...action.payload}],
       }
     default:
       return state;

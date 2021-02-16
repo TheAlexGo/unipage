@@ -1,5 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
 import {switchTheme} from "../store/actions/wordActions";
+import React from "react";
 
 function Header () {
   const theme = useSelector(state => state.words.theme)
@@ -24,7 +25,7 @@ function Header () {
 
 
   return (
-    <div>
+    <header>
       <nav className={classNav}>
         <div className="container">
           <a className="navbar-brand" href="/">TypingTest</a>
@@ -47,7 +48,7 @@ function Header () {
           </div>
         </div>
       </nav>
-    </div>
+    </header>
   )
 }
 
