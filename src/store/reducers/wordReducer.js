@@ -6,8 +6,9 @@ import {
   SET_DATA_TIMER,
   SET_ACCURACY,
   SET_SPM,
-  SWITCH_THEME
+  SWITCH_THEME, SET_LANG, SET_TYPE, SET_COUNT
 } from "../constActions";
+import {DEFAULT, ENG, RUS} from "../../constants";
 
 const defaultState = {
   str: "",
@@ -21,7 +22,27 @@ const defaultState = {
   timer_id: 0,
   timerActive: false,
   haveText: false,
-  theme: 'light'
+  theme: 'light',
+  langs: [
+    {
+      name: DEFAULT.name,
+      value: DEFAULT.value
+    },
+    {
+      name: RUS.name,
+      value: RUS.value
+    },
+    {
+      name: ENG.name,
+      value: ENG.value
+    },
+  ],
+  settings: {
+    lang: 'def',
+    type: 'sentence',
+    number: '',
+    format: 'json'
+  }
 }
 
 export default function wordReducer(state = defaultState, action) {
@@ -75,6 +96,21 @@ export default function wordReducer(state = defaultState, action) {
       return {
         ...state,
         theme: action.payload
+      }
+    case SET_LANG:
+      return {
+        ...state,
+        settings: {...state.settings, lang: action.payload}
+      }
+    case SET_TYPE:
+      return {
+        ...state,
+        settings: {...state.settings, type: action.payload}
+      }
+    case SET_COUNT:
+      return {
+        ...state,
+        settings: {...state.settings, number: action.payload}
       }
     default:
       return state;

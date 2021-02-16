@@ -20,9 +20,15 @@
     padding: 2px;
 }
 
+.text-block {
+    padding: 25px;
+    border-radius: 10px;
+    //height: 100%;
+}
+
 .light {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #f5f5f5;
     transition: .3s;
 
@@ -31,9 +37,7 @@
     }
 
     .text-block {
-        padding: 25px;
         background-color: #fff;
-        border-radius: 10px;
     }
 
     .normal-b {
@@ -43,7 +47,7 @@
 
 .dark {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #292e3c;
     transition: .3s;
     color: #ffebeb;
@@ -53,9 +57,7 @@
     }
 
     .text-block {
-        padding: 25px;
         background-color: #46485a;
-        border-radius: 10px;
     }
 
     .theme-switcher {

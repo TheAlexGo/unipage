@@ -2,22 +2,28 @@ import axios from "axios";
 import {
   KEY_CORRECT,
   KEY_ERROR,
-  SET_ACCURACY,
-  SET_DATA_TIMER,
+  SET_ACCURACY, SET_COUNT,
+  SET_DATA_TIMER, SET_LANG,
   SET_SPM,
   SET_TEXT,
-  SET_TIMER_ID,
+  SET_TIMER_ID, SET_TYPE,
   SWITCH_THEME
 } from "../constActions";
+import {store} from "../store";
 
 
 export const getTextAction = () => {
+
+  const state = store.getState().words;
+  const lang = state.settings.lang;
+  const number = state.settings.number;
+
   return async (dispatch) => {
     let test = new Promise((resolve) => {
-      if(0) {
-        resolve(axios.get('https://baconipsum.com/api/?type=all-meat&sentences=1'))
-      } else {
-        resolve(axios.get('https://fish-text.ru/get?type=sentence&number=1'))
+      if(lang === 'rus') {
+        resolve(axios.get(`https://fish-text.ru/get?type=sentence&number=${number}&format=json`));
+      } else if(lang === 'eng') {
+        resolve(axios.get(`https://baconipsum.com/api/?type=all-meat&sentences=${number}`));
       }
     })
     const response = await(test.then((response) => response).catch(() =>
@@ -25,10 +31,10 @@ export const getTextAction = () => {
     ))
 
     let responseText
-    if(0) {
-      responseText = response.data[0]
-    } else {
+    if(lang === 'rus') {
       responseText = response.data.text
+    } else if(lang === 'eng') {
+      responseText = response.data[0]
     }
 
     let text = [...responseText].map((s, index) => ({symb: s, class: 'normal-b', id: index}));
@@ -60,3 +66,13 @@ export const setSPM = (value) =>
 
 export const switchTheme = (value) =>
   ({type: SWITCH_THEME, payload: value})
+
+export const setLangAction = (value) =>
+  ({type: SET_LANG, payload: value})
+
+export const setTypeAction = (value) =>
+  ({type: SET_TYPE, payload: value})
+
+export const setCountAction = (value) =>
+  ({type: SET_COUNT, payload: value})
+

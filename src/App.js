@@ -5,6 +5,7 @@ import {getTextAction} from "./store/actions/wordActions";
 import {useDispatch, useSelector} from "react-redux";
 import {Results} from "./components/Results";
 import Header from "./components/Header";
+import React from "react";
 
 
 function App() {
@@ -23,18 +24,25 @@ function App() {
       <header>
         <Header />
       </header>
-      <section>
+      <section className="mt-5">
         <div className="container">
           <div className="row">
             <div className="col-12">
+
               <GetTextButton getText={getText} />
               <div className="container p-0">
                 <div className="row">
-                  <div className="col-12">
-                    <Results accuracy={accuracy} spm={spm} haveText={haveText} />
-                  </div>
-                  <div className="col-12">
+                  <div className="col-md-9 col-12 order-1 order-md-0 mt-3 mt-md-0">
                     <Main />
+                  </div>
+                  <div className="col-md-3 col-12 order-0 order-md-1">
+                    <div className="container p-0">
+                      <div className="row d-flex flex-column">
+                        <div className="col-12">
+                          <Results accuracy={accuracy} spm={spm} haveText={haveText} />
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
