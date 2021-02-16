@@ -16,7 +16,7 @@ export const Results = ({ accuracy, spm }) => {
   if(!haveText) return null;
 
   return (
-    <div className="d-flex justify-content-between text-block flex-column">
+    <div className="d-flex justify-content-between flex-column">
       <div>
         <span>Точность: </span>
         <br/>

@@ -9,6 +9,5 @@ export const SET_SPM = "WORD/SET_SPM";
 export const SWITCH_THEME = "SWITCH_THEME";
 
 export const SET_LANG = "SETTINGS/SET_LANG";
-export const SET_TYPE = "SETTINGS/SET_TYPE";
 export const SET_COUNT = "SETTINGS/SET_COUNT";
 
