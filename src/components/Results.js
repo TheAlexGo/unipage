@@ -28,12 +28,12 @@ export const Results = ({ accuracy, spm }) => {
     <div className="d-flex justify-content-between flex-column">
       <div className="container p-0">
         <div className="row">
-          <div className="col-6 col-md-12">
+          <div className="col-6 col-md-12 col-xl-6">
             <span>Точность: </span>
             <br/>
             <span>{accuracy}%</span>
           </div>
-          <div className="col-6 col-md-12">
+          <div className="col-6 col-md-12 col-xl-6">
             <span>Скорость: </span>
             <br/>
             <span>{spm} зн/мин.</span>

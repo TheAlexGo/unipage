@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="row">
         <div className="col-12">
           <a href="https://portfolio.thealexgo.ru" target="_blank" rel="noreferrer" className="text-secondary">
-            &copy; Гордеев (TheAlexGo) Александр
+            &copy; 2021 Гордеев (TheAlexGo) Александр
           </a>
         </div>
       </div>
