@@ -2,6 +2,16 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Get started! 
+
+### `clone https://github.com/TheAlexGo/unipage.git`
+
+To download the app files
+
+### `npm install`
+
+To download all the necessary packages
+
 ## Available Scripts
 
 In the project directory, you can run:
