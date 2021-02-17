@@ -6,6 +6,7 @@ import {getTextAction, keyCorrect, keyError} from "../store/actions/wordActions"
 import {calcAccuracy} from "./Timer";
 import {Results} from "./Results";
 import {GetTextButton} from "./GetTextButton";
+import ScoreTable from "./ScoreTable";
 
 
 function Main() {
@@ -75,6 +76,9 @@ function Main() {
               <Results accuracy={accuracy} spm={spm} />
             </div>
           </div>
+        </div>
+        <div className="col-12">
+          <ScoreTable />
         </div>
       </div>
     )

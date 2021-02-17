@@ -6,7 +6,7 @@ import {
   SET_DATA_TIMER,
   SET_ACCURACY,
   SET_SPM,
-  SWITCH_THEME, SET_LANG, SET_COUNT, SAVE_RESULT
+  SWITCH_THEME, SET_LANG, SET_COUNT, SAVE_RESULT, RESTART
 } from "../constActions";
 import {DEFAULT, ENG, RUS} from "../../constants";
 
@@ -114,6 +114,21 @@ export default function wordReducer(state = defaultState, action) {
       return {
         ...state,
         results: [...state.results, {...action.payload}],
+      }
+    case RESTART:
+      return {
+        ...state,
+        str: "",
+        indexSymb: 0,
+        current: 0,
+        error: 0,
+        all_symbols: 0,
+        seconds: 0,
+        spm: 0,
+        accuracy: 0,
+        timer_id: 0,
+        timerActive: false,
+        haveText: false,
       }
     default:
       return state;

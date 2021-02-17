@@ -12,7 +12,7 @@ function Header () {
   }
 
   let classNav = 'navbar navbar-expand-lg ';
-  let classButtonSwitch = 'btn ';
+  let classButtonSwitch = 'btn p-0 ';
   if(theme === 'light') {
     classNav += 'navbar-light bg-light';
     classButtonSwitch += 'btn-light';
@@ -41,7 +41,7 @@ function Header () {
               </li>
             </ul>
             <button onClick={themeSwitch} className={classButtonSwitch}>
-              <div className="theme-switcher">
+              <div className="theme-switcher ">
                 <i className="fas fa-sun" />
               </div>
             </button>

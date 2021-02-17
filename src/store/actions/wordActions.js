@@ -1,7 +1,7 @@
 import axios from "axios";
 import {
   KEY_CORRECT,
-  KEY_ERROR, SAVE_RESULT,
+  KEY_ERROR, RESTART, SAVE_RESULT,
   SET_ACCURACY, SET_COUNT,
   SET_DATA_TIMER, SET_LANG,
   SET_SPM,
@@ -135,3 +135,6 @@ export const setCountAction = (value) =>
 
 export const saveResultAction = (result) =>
   ({type: SAVE_RESULT, payload: result})
+
+export const reStartAction = () =>
+  ({type: RESTART})

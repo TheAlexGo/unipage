@@ -26,6 +26,23 @@
     //height: 100%;
 }
 
+.scoreTable-block {
+    &__results {
+        &__item {
+            margin-right: 20px;
+        }
+    }
+}
+
+section {
+    padding-bottom: 90px;
+}
+
+.btn-success {
+    background-color: #57c257;
+    border-color: #71cd71;
+}
+
 .light {
     width: 100vw;
     min-height: 100vh;
@@ -89,7 +106,7 @@
     .modal-header {
         background-color: #46485a;
     }
-    .modal-body {
+    .modal-body, .modal-dialog {
         background-color: #292e3c;
     }
     .modal-footer {

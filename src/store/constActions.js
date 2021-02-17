@@ -11,4 +11,5 @@ export const SWITCH_THEME = "SWITCH_THEME";
 export const SET_LANG = "SETTINGS/SET_LANG";
 export const SET_COUNT = "SETTINGS/SET_COUNT";
 
-export const SAVE_RESULT = "SAVE_RESULT"
+export const SAVE_RESULT = "SAVE_RESULT";
+export const RESTART = "RESTART";
