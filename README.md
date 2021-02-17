@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Get started! 
 
+Before downloading the project you must have [git](https://git-scm.com/download) install
+
 ### `git clone https://github.com/TheAlexGo/unipage.git`
 
 To download the app files
