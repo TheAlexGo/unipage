@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Get started! 
 
-### `clone https://github.com/TheAlexGo/unipage.git`
+### `git clone https://github.com/TheAlexGo/unipage.git`
 
 To download the app files
 
